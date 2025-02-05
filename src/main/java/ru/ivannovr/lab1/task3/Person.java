@@ -1,9 +1,9 @@
 package ru.ivannovr.lab1.task3;
 
 public class Person {
-    private String name;
-    private int age;
-    private int height;
+    private final String name;
+    private final int age;
+    private final int height;
 
     protected Person(String name, int age, int height) {
         this.name = name;
