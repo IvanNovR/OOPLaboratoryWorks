@@ -36,4 +36,8 @@ public class Main {
         System.out.print("Введите выбор: ");
         return scanner.nextInt();
     }
+
+    public static Scanner getScanner() {
+        return scanner;
+    }
 }

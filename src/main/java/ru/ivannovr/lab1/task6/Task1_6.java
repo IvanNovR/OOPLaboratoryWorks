@@ -1,5 +1,6 @@
 package ru.ivannovr.lab1.task6;
 
+import ru.ivannovr.Main;
 import ru.ivannovr.Task;
 
 import java.util.Scanner;
@@ -13,12 +14,10 @@ public class Task1_6 extends Task {
     public void execute() {
         this.printTaskHeader();
 
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите первый операнд: ");
-        int a = scanner.nextInt();
+        int a = Main.getScanner().nextInt();
         System.out.print("Введите второй операнд: ");
-        int b = scanner.nextInt();
-        scanner.close();
+        int b = Main.getScanner().nextInt();
 
         System.out.printf("%d + %d = %d\n", a, b, sum(a, b));
         System.out.printf("%d - %d = %d\n", a, b, subtract(a, b));

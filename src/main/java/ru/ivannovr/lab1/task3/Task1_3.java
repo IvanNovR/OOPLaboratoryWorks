@@ -1,5 +1,6 @@
 package ru.ivannovr.lab1.task3;
 
+import ru.ivannovr.Main;
 import ru.ivannovr.Task;
 
 import java.util.Scanner;
@@ -13,15 +14,13 @@ public class Task1_3 extends Task {
     public void execute() {
         this.printTaskHeader();
 
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Введите имя человека: ");
-        String name = scanner.next();
+        String name = Main.getScanner().next();
         System.out.print("Введите возраст человека: ");
-        int age = scanner.nextInt();
+        int age = Main.getScanner().nextInt();
         System.out.print("Введите рост человека: ");
-        int height = scanner.nextInt();
-        scanner.close();
+        int height = Main.getScanner().nextInt();
 
-        new Person("Иван", age, height).printResume();
+        new Person(name, age, height).printResume();
     }
 }
