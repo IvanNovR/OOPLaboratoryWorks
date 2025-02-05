@@ -2,6 +2,8 @@ package ru.ivannovr.lab1.task5;
 
 import ru.ivannovr.Task;
 
+import java.util.Scanner;
+
 public class Task1_5 extends Task {
     public Task1_5() {
         super("1.5");
@@ -10,7 +12,13 @@ public class Task1_5 extends Task {
     @Override
     public void execute() {
         this.printTaskHeader();
-        this.printDaysStatistic(5000);
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите кол-во дней: ");
+        int days = scanner.nextInt();
+        scanner.close();
+
+        this.printDaysStatistic(days);
     }
 
     private void printDaysStatistic(int days) {

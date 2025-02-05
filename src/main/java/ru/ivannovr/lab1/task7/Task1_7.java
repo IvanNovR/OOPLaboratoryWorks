@@ -18,6 +18,7 @@ public class Task1_7 extends Task {
         int a = scanner.nextInt();
         System.out.print("Введите вторую сторону прямоугольника: ");
         int b = scanner.nextInt();
+        scanner.close();
 
         new Rectangle(a, b).printInfo();
     }
